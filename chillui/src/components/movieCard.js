@@ -8,7 +8,7 @@ function MovieCard (props) {
 
     return(
       <div className="main">
-      <h1>Trending Movies</h1>
+        <h1>Trending Movies</h1>
       <ul className="cards">
         <li className="cards_item">
           <div className="card">
