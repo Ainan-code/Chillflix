@@ -1,32 +1,31 @@
 import React from "react";
-import './moviecard.css';
+import img1 from './assets/david-lee-2Cirx1WkMvU-unsplash.jpg';
 
 
-function MovieCard () {
+
+function MovieCard (props) {
+   const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
     return(
-        <div>
-      <section class="content">
-  <main class="card">
-    <div class="breaking-bad">
-     <div> 
-     <h1 class="title">Breaking Bad</h1>
-     </div>
-      <div>
-      <ul class="meta">
-        <li>9.5/10</li>
-        <li>TV Series</li>
-        <li>Crime, Drama, Thriller</li>
+      <div className="main">
+      <h1>Trending Movies</h1>
+      <ul className="cards">
+        <li className="cards_item">
+          <div className="card">
+            <div className="card_image">
+              <img src={IMG_API + props.movie.profile_path}></img>
+               </div>
+            <div className="card_content">
+              <h2 className="card_title">{props.movie.name}</h2>
+              <p className="card_text">{props.movie.popularity}</p>
+              <button className="btn card_btn">Watch Now</button>
+            </div>
+          </div>
+       </li>
       </ul>
-      <p class="description">A chemisty teacher diagnosed with a terminal lung cancer teams up with his former student to cook and sell crystal meth.</p>
-      <hr class="break"/>
-      </div>
-      
-      <div class="bottom-info"><a class="watch">Watch Trailer</a><a class="plus">+</a><a class="add-to">Add to Watchlist</a><span class="add-meta">546 of your friends have watched this</span></div>
     </div>
-  </main>
-</section>
-        </div>
+    
+   
     )
 }
 

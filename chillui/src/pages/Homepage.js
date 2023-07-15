@@ -1,12 +1,14 @@
 import React from "react";
 import MovieCard from "../components/movieCard";
+import PopulateApi from "../components/popularmovies";
+
 
 
 function Homepage() {
 
     return(
         <div>
-    <MovieCard></MovieCard>
+   <PopulateApi></PopulateApi>
         </div>
     )
 }
