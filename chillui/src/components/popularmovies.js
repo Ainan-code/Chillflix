@@ -3,7 +3,7 @@ import MovieCard from "./movieCard";
 
 
 
-function PopulateApi() {
+function MoviesList() {
 
    const [movies, setMovies] = useState([]);
    
@@ -13,13 +13,15 @@ function PopulateApi() {
   useEffect(() => {
   
    function fetchMovieData() {
-        fetch("https://api.themoviedb.org/3/person/popular?api_key=aff3cbd8c193d4c7fe349064ab052728")
+        fetch("https://api.themoviedb.org/3/movie/popular?api_key=7c038e70cdfdbed8af02ed279af5eec1")
           .then(response => {
-            return response.json()
+            return response.json();
+         
           
           })
           .then(data => {
             setMovies(data.results)
+            console.log(data)
           });
        
           
@@ -36,9 +38,9 @@ function PopulateApi() {
             {
               
                 
-            movies ? movies.map((item) => {
+       movies ?     movies.map((item) => {
 
-               return <MovieCard  movie={item} key={item.id} ></MovieCard>
+               return <MovieCard  movie={item} key={item.id} {...item} ></MovieCard>
             }): "no data"}
     
         </div>
@@ -46,4 +48,4 @@ function PopulateApi() {
 }
 
 
-export default PopulateApi;
+export default MoviesList;

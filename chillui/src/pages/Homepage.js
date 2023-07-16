@@ -1,6 +1,6 @@
 import React from "react";
-import MovieCard from "../components/movieCard";
-import PopulateApi from "../components/popularmovies";
+
+import MoviesList from "../components/popularmovies";
 
 
 
@@ -8,7 +8,7 @@ function Homepage() {
 
     return(
         <div>
-   <PopulateApi></PopulateApi>
+   <MoviesList/>
         </div>
     )
 }
