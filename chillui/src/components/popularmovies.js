@@ -30,18 +30,20 @@ function MoviesList() {
       fetchMovieData()
     
   }, []);
-
+ 
 
     return(
         <div className="api">
           
-            {
+            { 
               
-                
-       movies ?     movies.map((item) => {
+            
+              movies ?     movies.map((item) => {
 
-               return <MovieCard  movie={item} key={item.id} {...item} ></MovieCard>
-            }): "no data"}
+                return <MovieCard  movie={item} key={item.id} {...item} ></MovieCard>
+             }): "no data"
+             }   
+      
     
         </div>
     )

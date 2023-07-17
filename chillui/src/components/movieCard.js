@@ -9,8 +9,8 @@ function MovieCard ({original_title, overview, poster_path}) {
     return(
       <div className="main">
         
-      <ul className="cards">
-        <li className="cards_item">
+      <div className="cards">
+        <div className="cards_item">
           <div className="card">
             <div className="card_image">
               <img src={IMG_API + poster_path}></img>
@@ -21,8 +21,8 @@ function MovieCard ({original_title, overview, poster_path}) {
               <button className="btn card_btn">Watch Now</button>
             </div>
           </div>
-       </li>
-      </ul>
+       </div>
+      </div>
     </div>
     
    
